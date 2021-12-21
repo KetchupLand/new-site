@@ -1,0 +1,197 @@
+@import "fira-code.scss";
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	background-color: #222222;
+	background: url('../images/kl_nodes_stone.png');
+	color: #ffffff;
+	margin: 0;
+	font-family: "Fira Code", monospace;
+	font-size: 14pt;
+	padding-bottom: 100px;
+}
+
+a {
+	color: greenyellow;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 40px;
+}
+
+p {
+	line-height: 1.4;
+}
+
+pre {
+	background-color: #141414;
+	padding: 12px;
+}
+code {
+	background-color: #141414;
+}
+
+.disclaimer {
+	background-color: #dd3131;
+	color: #ffffff;
+	margin: auto;
+	padding: 5px;
+	text-align: center;
+}
+
+.index-top {
+	background: url('../images/kl_nodes_grass.png');
+	color: #888888;
+	margin: auto;
+	padding: 5px;
+	text-align: center;
+
+	img {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		image-rendering: pixelated;
+		width: 752px;
+		max-width: 100%;
+	}
+}
+
+.nav {
+	background-color: #1a1a1a;
+	background: url('../images/kl_nodes_dirt.png');
+
+	padding: 25px 50px;
+
+	.links {
+		margin: auto;
+		max-width: 900px;
+
+		a {
+			color: white;
+			font-size: 14pt;
+			font-weight: bold;
+			text-decoration: none;
+			padding: 20px 10px;
+		}
+
+		.right {
+			float: right;
+		}
+	}
+}
+
+.container {
+	max-width: 1200px;
+	margin: 20px auto;
+
+	.content {
+		margin: 0px 20px;
+	}
+}
+
+.videobox {
+	margin-left: 5px;
+	float: right;
+}
+
+#page-about {
+	img {
+		width: 400px;
+		float: right;
+		margin-left: 10px;
+	}
+}
+
+/// Sticky footer \\\
+
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 55px;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	vertical-align: bottom;
+	font-size: 10pt;
+}
+
+/// Download page stuff \\\
+
+$btn-color: #ffffff;
+$btn-bgcolor: #2a9c2a;
+$btn-git-bgcolor: #2a8b9c;
+$btn-select-bgcolor: #2b2b2b;
+
+.btn {
+	&:hover {
+		background-color: darken($btn-bgcolor, 10%);
+	}
+
+	background-color: $btn-bgcolor;
+	color: $btn-color;
+	display: inline-block;
+
+	font-weight: bold;
+	margin-right: .5em;
+	padding: 10px 20px;
+
+	&.big {
+		font-size: 20pt;
+	}
+
+	&.git {
+		&:hover {
+			background-color: darken($btn-git-bgcolor, 10%);
+		}
+
+		background-color: $btn-git-bgcolor;
+	}
+
+	&.btn-ps {
+		&:hover {
+			background-color: darken($btn-select-bgcolor, 10%);
+		}
+
+		background-color: $btn-select-bgcolor;
+		border: 1px solid $btn-color;
+		font-size: 20pt;
+		text-align: center;
+		height: 164px;
+		width: 164px;
+
+		.fab {
+			font-size: 48pt;
+			display: block;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		img.fab {
+			height: 48pt;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+.platform-select {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding-bottom: 30px;
+	border-bottom: 2px solid white;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.platform-box {
+	height: 400px;
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% if page.title %}{{ page.title }} - {% endif %}KetchupLand</title>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+	<div class="disclaimer">
+		The new KetchupLand website is still under construction!
+	</div>
+	<div class="index-top">
+		<a href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/logo.png' | relative_url }}"></a>
+	</div>
+	<div class="nav">
+		<div class="links">
+			<a href="{{ '/' | relative_url }}">Home</a>
+			{% comment %}- <a href="about">About</a>{% endcomment %}
+			{% comment %}- <a href="gallery">Gallery</a>{% endcomment %}
+			- <a href="{{ 'download' | relative_url }}">Download</a>
+			{% comment %}- <a href="devblog/">Development Blog</a>{% endcomment %}
+			<span class="right">
+				<a href="https://discord.gg/caRDZkPQzc"><i class="fab fa-discord"></i></a>
+				<a href="https://github.com/KetchupLand"><i class="fab fa-github"></i></a>
+			</span>
+		</div>
+	</div>
+	<div class="container">
+		<div class="content" {% if page.title %}id="page-{{ page.title | slugify }}"{% endif %}>
+			{% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+			{{ content }}
+		</div>
+	</div>
+	<div class="footer">
+		<p>Made with &hearts; by Danil_2461 and ROllerozxa
+			<br>KetchupLand is a fork of the KetchupTest game originally developed by Tim7 and licensed under the MIT license.</p>
+	</div>
+</body>
+</html>

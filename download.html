@@ -1,0 +1,50 @@
+---
+title: Download
+---
+<p><em>Warning: Keep in mind that KetchupLand is still in heavy development. The world generation is not yet stable, and is subject to change as development progresses.</em></p>
+
+<p><strong>The latest version of KetchupLand is {{ site.data.latest.version }}, built from commit <a href="https://github.com/KetchupLand/minetest/commit/{{ site.data.latest.commit }}">{{ site.data.latest.commit }}</a>.</strong></p>
+
+<div class="platform-select" id="platform-select" style="display:none">
+	<h1>Pick your platform</h1>
+	<a id="button-windows" class="btn btn-ps" href="javascript:showPlatform('windows')"><i class="fab fa-windows"></i>Windows</a>
+	<a id="button-linux" class="btn btn-ps" href="javascript:showPlatform('linux')"><i class="fab fa-linux"></i>Linux</a>
+	<a id="button-android" class="btn btn-ps" href="javascript:showPlatform('android')"><i class="fab fa-android"></i>Android</a>
+	<a id="button-minetest" class="btn btn-ps" href="javascript:showPlatform('minetest')"><img class="fab" src="{{ '/assets/icons/minetest-outline.svg' | relative_url }}">Minetest</a>
+</div>
+
+<div class="platform-box" id="platform-windows">
+	<h2>Windows</h2>
+
+	<p><a class="btn big" href="https://github.com/KetchupLand/releases/releases/download/{{ site.data.latest.version }}/ketchupland-{{ site.data.latest.version }}-win64.{{ site.data.latest.archiveformat }}">Download KetchupLand for Windows (x64)</a></p>
+
+	<p><a class="btn" href="https://github.com/KetchupLand/releases/releases/download/{{ site.data.latest.version }}/ketchupland-{{ site.data.latest.version }}-win32.{{ site.data.latest.archiveformat }}">Download KetchupLand for Windows (x32)</a></p>
+
+	<p>KetchupLand is a portable game. You do not need administrator rights, only some <a href="https://7-zip.org">file archiving program</a>. Extract and play!
+</div>
+
+<div class="platform-box" id="platform-linux">
+	<h2>Linux</h2>
+
+	<p><a class="btn big" href=""><s>Download KetchupLand for Linux (AppImage 64-bit) (TODO)</s></a></p>
+
+	<p><s>For users of Arch-based distributions, <a href="https://aur.archlinux.org/packages/ketchupland/">there is an officially maintained AUR package for KetchupLand</a> which should be preferred.</s></p>
+
+	<p>On other distributions you can also choose to <a href="https://github.com/KetchupLand/minetest">clone the source code</a> and follow the instructions to compile the source code.</p>
+</div>
+
+<div class="platform-box" id="platform-android">
+	<h2>Android</h2>
+
+	<p><a class="btn big" href="https://github.com/KetchupLand/releases/releases/download/{{ site.data.latest.version }}/KetchupLand-{{ site.data.latest.version }}-armeabi-v7a.apk">Download KetchupLand for Android (armeabi-v7a apk)</a></p>
+
+	<p>You will need to sideload it by enabling installation from unknown sources.</p>
+</div>
+
+<div class="platform-box" id="platform-minetest">
+	<h2>Minetest</h2>
+
+	<p>The fork of Minetest that comes bundled with KetchupLand is the recommended way of playing. But if you already have a regular version of Minetest installed (or are on an unsupported platform) and would like to play KetchupLand through Minetest, you can download and install it through <s><a href="https://content.minetest.net/packages/danil_2461/ketchupland/">ContentDB</a> or by</s> <a href="https://github.com/KetchupLand/KetchupLand">manually downloading/cloning it from Github</a>.</p>
+</div>
+
+<script src="{{ '/assets/js/download.js' | relative_url }}"></script>
